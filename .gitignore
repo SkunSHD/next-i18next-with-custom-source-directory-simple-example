@@ -1,0 +1,18 @@
+# Dependencies
+node_modules
+
+# Dist
+dist
+
+# OS
+.DS_Store
+
+# Development Environment
+.vscode
+/.idea
+
+# Logs
+runtime.log
+
+src/.next
+packages/
