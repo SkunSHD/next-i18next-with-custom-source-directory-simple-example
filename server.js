@@ -4,7 +4,7 @@ const nextI18NextMiddleware = require('next-i18next/middleware')
 const http = require('http');
 const path = require('path');
 
-const nextI18next = require('./i18n')
+const nextI18next = require('./src/i18n')
 
 const port = process.env.PORT || 4000
 const app = next({
@@ -15,6 +15,7 @@ const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
     const server = express()
+
     server.use('/static', express.static(path.join(__dirname, './static')));
 
     server.use(nextI18NextMiddleware(nextI18next))
